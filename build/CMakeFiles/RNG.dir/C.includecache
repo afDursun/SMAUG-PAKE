@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/rng.h
+stdio.h
+-
+
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/rng.c
+rng.h
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/rng.h
+fcntl.h
+-
+openssl/conf.h
+-
+openssl/err.h
+-
+openssl/evp.h
+-
+string.h
+-
+unistd.h
+-
+

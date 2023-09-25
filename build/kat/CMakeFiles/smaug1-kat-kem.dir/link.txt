@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libsmaug1-kat-kem.so -o ../lib/libsmaug1-kat-kem.so CMakeFiles/smaug1-kat-kem.dir/kat_kem.c.o 

@@ -1,0 +1,317 @@
+[
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/dg.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/pack.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pack.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pack.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/poly.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/key.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/key.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/key.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/pake.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/ciphertext.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/hwt.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/io.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/indcpa.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/hash.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -Dsmaug5_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug5.dir/src/verify.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/dg.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/pack.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pack.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pack.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/poly.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/key.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/key.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/key.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/pake.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/ciphertext.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/hwt.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/io.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/indcpa.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/hash.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -Dsmaug3_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug3.dir/src/verify.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/dg.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/pack.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pack.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pack.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/poly.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/key.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/key.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/key.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/pake.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/ciphertext.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/hwt.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/io.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/indcpa.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/hash.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -Dsmaug1_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -Wall -Wextra -std=gnu11 -o CMakeFiles/smaug1.dir/src/verify.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DFIPS202_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -std=gnu11 -o CMakeFiles/FIPS202.dir/src/fips202.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/fips202.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/fips202.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build",
+  "command": "/usr/bin/cc -DRNG_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include  -fPIC   -O3 -fomit-frame-pointer -fPIC -std=gnu11 -o CMakeFiles/RNG.dir/src/rng.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/rng.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/rng.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++   -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++   -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++   -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++   -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test",
+  "command": "/usr/bin/c++  -DSMAUG_MODE=5 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -o CMakeFiles/smaug5-test.dir/UnitTest.cpp.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/test/UnitTest.cpp",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/test/UnitTest.cpp"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test",
+  "command": "/usr/bin/c++  -DSMAUG_MODE=3 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -o CMakeFiles/smaug3-test.dir/UnitTest.cpp.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/test/UnitTest.cpp",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/test/UnitTest.cpp"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test",
+  "command": "/usr/bin/c++  -DSMAUG_MODE=1 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest/include -isystem /home/afd/Desktop/smaug/SMAUG-reference-implementation/build/_deps/googletest-src/googletest    -o CMakeFiles/smaug1-test.dir/UnitTest.cpp.o -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/test/UnitTest.cpp",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/test/UnitTest.cpp"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug5-main.dir/main.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/test/main.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/test/main.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug3-main.dir/main.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/test/main.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/test/main.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug1-main.dir/main.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/test/main.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/test/main.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/kat",
+  "command": "/usr/bin/cc -DCRYPTO_ALGNAME=\\\"SMAUG5_KEM\\\" -DSMAUG_MODE=5 -Dsmaug5_kat_kem_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/../include  -fPIC   -std=gnu11 -o CMakeFiles/smaug5-kat-kem.dir/kat_kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/kat_kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/kat_kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/kat",
+  "command": "/usr/bin/cc -DCRYPTO_ALGNAME=\\\"SMAUG3_KEM\\\" -DSMAUG_MODE=3 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/../include    -std=gnu11 -o CMakeFiles/smaug3-kat-kem-main.dir/PQCgenKAT_kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/kat",
+  "command": "/usr/bin/cc -DCRYPTO_ALGNAME=\\\"SMAUG5_KEM\\\" -DSMAUG_MODE=5 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/../include    -std=gnu11 -o CMakeFiles/smaug5-kat-kem-main.dir/PQCgenKAT_kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/kat",
+  "command": "/usr/bin/cc -DCRYPTO_ALGNAME=\\\"SMAUG3_KEM\\\" -DSMAUG_MODE=3 -Dsmaug3_kat_kem_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/../include  -fPIC   -std=gnu11 -o CMakeFiles/smaug3-kat-kem.dir/kat_kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/kat_kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/kat_kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/kat",
+  "command": "/usr/bin/cc -DCRYPTO_ALGNAME=\\\"SMAUG1_KEM\\\" -DSMAUG_MODE=1 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/../include    -std=gnu11 -o CMakeFiles/smaug1-kat-kem-main.dir/PQCgenKAT_kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/kat",
+  "command": "/usr/bin/cc -DCRYPTO_ALGNAME=\\\"SMAUG1_KEM\\\" -DSMAUG_MODE=1 -Dsmaug1_kat_kem_EXPORTS -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/../include  -fPIC   -std=gnu11 -o CMakeFiles/smaug1-kat-kem.dir/kat_kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/kat_kem.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/kat_kem.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug5-benchmark.dir/speed.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug5-benchmark.dir/cpucycles.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/cpucycles.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/cpucycles.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=5 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug5-benchmark.dir/speed_print.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed_print.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed_print.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug3-benchmark.dir/speed.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug3-benchmark.dir/cpucycles.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/cpucycles.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/cpucycles.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=3 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug3-benchmark.dir/speed_print.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed_print.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed_print.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug1-benchmark.dir/speed.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug1-benchmark.dir/cpucycles.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/cpucycles.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/cpucycles.c"
+},
+{
+  "directory": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/benchmark",
+  "command": "/usr/bin/cc -DSMAUG_MODE=1 -I/home/afd/Desktop/smaug/SMAUG-reference-implementation/include    -std=gnu11 -o CMakeFiles/smaug1-benchmark.dir/speed_print.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed_print.c",
+  "file": "/home/afd/Desktop/smaug/SMAUG-reference-implementation/benchmark/speed_print.c"
+}
+]

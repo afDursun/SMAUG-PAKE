@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/smaug1-benchmark.dir/speed.c.o CMakeFiles/smaug1-benchmark.dir/cpucycles.c.o CMakeFiles/smaug1-benchmark.dir/speed_print.c.o  -o ../bin/smaug1-benchmark  -Wl,-rpath,/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/lib ../lib/libsmaug1.so /usr/lib/x86_64-linux-gnu/libcrypto.so ../lib/libRNG.so ../lib/libFIPS202.so 

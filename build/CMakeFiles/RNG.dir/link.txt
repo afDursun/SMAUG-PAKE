@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libRNG.so -o lib/libRNG.so CMakeFiles/RNG.dir/src/rng.c.o  /usr/lib/x86_64-linux-gnu/libcrypto.so 

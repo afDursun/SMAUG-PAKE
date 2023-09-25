@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/parameters.h
+
+../include/rng.h
+stdio.h
+-
+
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/PQCgenKAT_kem.c
+api.h
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/api.h
+rng.h
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/rng.h
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/api.h
+stdint.h
+-
+parameters.h
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/kat/parameters.h
+

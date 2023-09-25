@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/smaug5-kat-kem-main.dir/PQCgenKAT_kem.c.o  -o ../bin/smaug5-kat-kem-main  -Wl,-rpath,/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/lib ../lib/libsmaug5-kat-kem.so ../lib/libsmaug5.so /usr/lib/x86_64-linux-gnu/libcrypto.so ../lib/libRNG.so ../lib/libFIPS202.so 

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libFIPS202.so -o lib/libFIPS202.so CMakeFiles/FIPS202.dir/src/fips202.c.o 

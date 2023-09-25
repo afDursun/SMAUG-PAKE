@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/smaug1-test.dir/UnitTest.cpp.o  -o ../bin/smaug1-test  -Wl,-rpath,/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/lib ../lib/libgtest_main.a ../lib/libsmaug1.so /usr/lib/x86_64-linux-gnu/libcrypto.so ../lib/libgtest.a -lpthread ../lib/libRNG.so ../lib/libFIPS202.so 

@@ -1,0 +1,5 @@
+if(EXISTS "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test/smaug3-test[1]_tests.cmake")
+  include("/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/test/smaug3-test[1]_tests.cmake")
+else()
+  add_test(smaug3-test_NOT_BUILT smaug3-test_NOT_BUILT)
+endif()

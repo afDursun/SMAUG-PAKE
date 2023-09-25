@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/smaug3-main.dir/main.c.o  -o ../bin/smaug3-main  -Wl,-rpath,/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/lib ../lib/libsmaug3.so /usr/lib/x86_64-linux-gnu/libcrypto.so ../lib/libRNG.so ../lib/libFIPS202.so 

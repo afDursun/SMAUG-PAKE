@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/fips202.h
+stddef.h
+-
+stdint.h
+-
+
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/fips202.c
+fips202.h
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/fips202.h
+stddef.h
+-
+stdint.h
+-
+
