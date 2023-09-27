@@ -122,9 +122,22 @@ CMakeFiles/smaug3.dir/src/pake.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/smaug3.dir/src/pake.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/pake.c -o CMakeFiles/smaug3.dir/src/pake.c.s
 
+CMakeFiles/smaug3.dir/src/aes.c.o: CMakeFiles/smaug3.dir/flags.make
+CMakeFiles/smaug3.dir/src/aes.c.o: ../src/aes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/smaug3.dir/src/aes.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/aes.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/aes.c
+
+CMakeFiles/smaug3.dir/src/aes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/smaug3.dir/src/aes.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/aes.c > CMakeFiles/smaug3.dir/src/aes.c.i
+
+CMakeFiles/smaug3.dir/src/aes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/smaug3.dir/src/aes.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/aes.c -o CMakeFiles/smaug3.dir/src/aes.c.s
+
 CMakeFiles/smaug3.dir/src/ciphertext.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/ciphertext.c.o: ../src/ciphertext.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/smaug3.dir/src/ciphertext.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/smaug3.dir/src/ciphertext.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/ciphertext.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c
 
 CMakeFiles/smaug3.dir/src/ciphertext.c.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/smaug3.dir/src/ciphertext.c.s: cmake_force
 
 CMakeFiles/smaug3.dir/src/hwt.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/hwt.c.o: ../src/hwt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/smaug3.dir/src/hwt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/smaug3.dir/src/hwt.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/hwt.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hwt.c
 
 CMakeFiles/smaug3.dir/src/hwt.c.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/smaug3.dir/src/hwt.c.s: cmake_force
 
 CMakeFiles/smaug3.dir/src/kem.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/kem.c.o: ../src/kem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/smaug3.dir/src/kem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/smaug3.dir/src/kem.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/kem.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/kem.c
 
 CMakeFiles/smaug3.dir/src/kem.c.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/smaug3.dir/src/kem.c.s: cmake_force
 
 CMakeFiles/smaug3.dir/src/io.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/io.c.o: ../src/io.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/smaug3.dir/src/io.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/smaug3.dir/src/io.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/io.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/io.c
 
 CMakeFiles/smaug3.dir/src/io.c.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/smaug3.dir/src/io.c.s: cmake_force
 
 CMakeFiles/smaug3.dir/src/indcpa.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/indcpa.c.o: ../src/indcpa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/smaug3.dir/src/indcpa.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/smaug3.dir/src/indcpa.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/indcpa.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/indcpa.c
 
 CMakeFiles/smaug3.dir/src/indcpa.c.i: cmake_force
@@ -189,7 +202,7 @@ CMakeFiles/smaug3.dir/src/indcpa.c.s: cmake_force
 
 CMakeFiles/smaug3.dir/src/hash.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/hash.c.o: ../src/hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/smaug3.dir/src/hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/smaug3.dir/src/hash.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/hash.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c
 
 CMakeFiles/smaug3.dir/src/hash.c.i: cmake_force
@@ -202,7 +215,7 @@ CMakeFiles/smaug3.dir/src/hash.c.s: cmake_force
 
 CMakeFiles/smaug3.dir/src/verify.c.o: CMakeFiles/smaug3.dir/flags.make
 CMakeFiles/smaug3.dir/src/verify.c.o: ../src/verify.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/smaug3.dir/src/verify.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/smaug3.dir/src/verify.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/smaug3.dir/src/verify.c.o   -c /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/verify.c
 
 CMakeFiles/smaug3.dir/src/verify.c.i: cmake_force
@@ -220,6 +233,7 @@ smaug3_OBJECTS = \
 "CMakeFiles/smaug3.dir/src/poly.c.o" \
 "CMakeFiles/smaug3.dir/src/key.c.o" \
 "CMakeFiles/smaug3.dir/src/pake.c.o" \
+"CMakeFiles/smaug3.dir/src/aes.c.o" \
 "CMakeFiles/smaug3.dir/src/ciphertext.c.o" \
 "CMakeFiles/smaug3.dir/src/hwt.c.o" \
 "CMakeFiles/smaug3.dir/src/kem.c.o" \
@@ -236,6 +250,7 @@ lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/pack.c.o
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/poly.c.o
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/key.c.o
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/pake.c.o
+lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/aes.c.o
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/ciphertext.c.o
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/hwt.c.o
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/src/kem.c.o
@@ -247,7 +262,7 @@ lib/libsmaug3.so: CMakeFiles/smaug3.dir/build.make
 lib/libsmaug3.so: lib/libRNG.so
 lib/libsmaug3.so: lib/libFIPS202.so
 lib/libsmaug3.so: CMakeFiles/smaug3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C shared library lib/libsmaug3.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C shared library lib/libsmaug3.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/smaug3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

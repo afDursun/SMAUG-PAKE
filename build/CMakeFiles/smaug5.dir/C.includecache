@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/aes.h
+stdint.h
+-
+stddef.h
+-
+
 ../include/ciphertext.h
 stdint.h
 -
@@ -179,8 +185,12 @@ poly.h
 /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/poly.h
 rng.h
 /home/afd/Desktop/smaug/SMAUG-reference-implementation/src/rng.h
+aes.h
+/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/aes.h
 stdio.h
 -
 openssl/aes.h
+-
+openssl/rand.h
 -
 

@@ -62,9 +62,11 @@
 #define T_BYTES (LWE_N / 8)                                                     // 32
 
 #define SHARED_SECRETE_BYTES (32)                                               // 32
-#define CRYPTO_BYTES SHARED_SECRETE_BYTES                                       // 32
+#define CRYPTO_BYTES SHARED_SECRETE_BYTES 
+                                      // 32
 #define ID_BYTES (32)
 #define PW_BYTES (32)
+
 
 #define CTPOLY1_BYTES (LWE_N)                                                   // element in R_p
 #define CTPOLY2_BYTES (LOG_P2 * LWE_N >> 3)                                     // element in R_p'
@@ -83,7 +85,7 @@
 #define PKPOLYVEC_BYTES (PKPOLY_BYTES * MODULE_RANK)                            // vector with element in R_q
 #define PKPOLYMAT_BYTES (PKPOLYVEC_BYTES * MODULE_RANK)                         // matrix with element in R_q
 #define PUBLICKEY_BYTES (PKSEED_BYTES + PKPOLYVEC_BYTES)                        // (A seed, b(x) vector)
-
+#define PAKE_A0_SEND (ID_BYTES + PW_BYTES + PUBLICKEY_BYTES)
 // clang-format on
 
 #endif // SMAUG_PARAMETERS_H

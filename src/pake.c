@@ -9,35 +9,52 @@
 #include "parameters.h"
 #include "poly.h"
 #include "rng.h"
+#include "aes.h"
 #include <stdio.h>
 #include <openssl/aes.h>
+#include <openssl/rand.h>
+
+#define BLOCK_SIZE 16
 
 
-int pake_a0(uint8_t *pw, uint8_t *cid, uint8_t *sid, uint8_t *send_a0, uint8_t *state_1, uint8_t *pk, uint8_t *sk) {
+void encryptData(const uint8_t *key, uint8_t *data, size_t dataSize) {
+    struct AES_ctx ctx;
+    AES_init_ctx(&ctx, key);
+
+    for (size_t i = 0; i < dataSize; i += BLOCK_SIZE) {
+        AES_ECB_encrypt(&ctx, data + i);
+    }
+}
+
+void decryptData(const uint8_t *key, uint8_t *data, size_t dataSize) {
+    struct AES_ctx ctx;
+    AES_init_ctx(&ctx, key);
+
+    for (size_t i = 0; i < dataSize; i += BLOCK_SIZE) {
+        AES_ECB_decrypt(&ctx, data + i);
+    }
+}
+void printData(const uint8_t *data, size_t dataSize) {
+    for (size_t i = 0; i < dataSize; i++) {
+        printf("%02x", data[i]);
+    }
+    printf("\n");
+}
+
+
+int pake_a0(uint8_t *pw, uint8_t *ssid, uint8_t *send_a0, uint8_t *state_1, uint8_t *pk, uint8_t *sk) {
     int i;
-    
-    AES_KEY key;
-    const char *keyData = "my_128_bit_key";
-    unsigned char encryptedText[AES_BLOCK_SIZE];
+
+    uint8_t key[16] = "my_128_bit_key";
+    uint8_t conc[PAKE_A0_SEND];
+    uint8_t conc1[PAKE_A0_SEND];
+   
     
     crypto_kem_keypair(pk, sk);
     
-    printf("\n ******************PAKE A0****************** \n");
-    printf("\n pk: ");
-    for (int i = 0; i < 100; i++){
-    	printf("%02X", pk[i]);
-    }
-    printf("\n");
-    printf("\n sk: ");
-    for (int i = 0; i < 200; i++){
-    	printf("%02X", sk[i]);
-    }
-    printf("\n");
-    
-    uint8_t conc[ID_BYTES + PW_BYTES + PUBLICKEY_BYTES];
-    
+
     for(i = 0; i < ID_BYTES ; i++ ){
-    	conc[i] = sid[i];
+    	conc[i] = ssid[i];
     } 
     
     for(i = 0; i < PW_BYTES ; i++ ){
@@ -47,53 +64,82 @@ int pake_a0(uint8_t *pw, uint8_t *cid, uint8_t *sid, uint8_t *send_a0, uint8_t *
     for(i = 0; i < PUBLICKEY_BYTES ; i++ ){
     	conc[i + ID_BYTES + PW_BYTES] = pk[i];
     } 
-    
-    printf("\n");
-    printf("\n Epk: ");
-    for (int i = 0; i < 150; i++) {
-        printf("%02x", conc[i]);
-    }
-    printf("\n");
-    
-    
-    AES_set_encrypt_key((const unsigned char *)keyData, 128, &key);
-    AES_encrypt(conc, send_a0, &key);
-    
-    
-    
-    printf("\n");
-    printf("\n Epk-Encrepted-A0: ");
-    for (int i = 0; i < AES_BLOCK_SIZE; i++) {
-        printf("%02x", send_a0[i]);
-    }
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
+
+    encryptData(key, conc, PAKE_A0_SEND);
+    memcpy(send_a0, conc, PAKE_A0_SEND);
+ 
+
     return 1;
 }
 
-int pake_b0(uint8_t *send_a0, uint8_t *sid, uint8_t *send_b0, uint8_t *state_2, uint8_t *ct, uint8_t *key_a){
+int pake_b0(uint8_t *send_a0, uint8_t *pw, uint8_t *a_id,  uint8_t *b_id, uint8_t *ssid, uint8_t *send_b0,uint8_t *state_2,uint8_t *ct, uint8_t *key_b){
     printf("\n ******************PAKE B0****************** \n");
-    
-    AES_KEY key;
+    uint8_t key[16] = "my_128_bit_key";
+    int AUTH_SIZE = ID_BYTES*3 + PW_BYTES + AES_BLOCK_SIZE + CIPHERTEXT_BYTES + CRYPTO_BYTES;
+
+    int i;
     const char *keyData = "my_128_bit_key";
-    uint8_t conc[ID_BYTES + PW_BYTES*2 + PUBLICKEY_BYTES];
-    
-    AES_set_decrypt_key((const unsigned char *)keyData, 128, &key);
-    AES_decrypt(send_a0, conc, &key); 
-    
-    printf("\n");
-    printf("\n Epk-Encrepted-B0: ");
-    for (int i = 0; i < AES_BLOCK_SIZE; i++) {
-        printf("%02x", send_a0[i]);
+
+    uint8_t pk[PUBLICKEY_BYTES] = {0};
+    uint8_t auth[AUTH_SIZE];
+
+    decryptData(key, send_a0, PAKE_A0_SEND);
+
+
+    for(i = 0 ; i < PUBLICKEY_BYTES ; i++){
+        pk[i] = send_a0[ID_BYTES + PW_BYTES + i];
     }
-    printf("\n");
     
-    printf("\n");
-    printf("\n Epk-Decrepted: ");
-    for (int i = 0; i < 150; i++) {
-        printf("%02x", conc[i]);
-    }
-    printf("\n");
+    crypto_kem_encap(ct, key_b, pk);
+
+    printf("keyB:");
+    printData(key_b, 32);
+   
+
+    for(i = 0; i < ID_BYTES ; i++ ){
+    	auth[i] = ssid[i];
+    } 
+    
+    for(i = 0; i < ID_BYTES ; i++ ){
+    	auth[i + ID_BYTES] = a_id[i];
+    } 
+
+    for(i = 0; i < ID_BYTES ; i++ ){
+    	auth[i + ID_BYTES*2] = b_id[i];
+    } 
+
+    for(i = 0; i < PW_BYTES ; i++ ){
+    	auth[i + ID_BYTES*3] = b_id[i];
+    } 
+
+    for(i = 0; i < AES_BLOCK_SIZE ; i++ ){
+    	auth[i + ID_BYTES*3 + PW_BYTES] = send_a0[i];
+    } 
+
+    for(i = 0; i < CIPHERTEXT_BYTES ; i++ ){
+    	auth[i + ID_BYTES*3 + PW_BYTES + AES_BLOCK_SIZE] = ct[i];
+    } 
+
+    for(i = 0; i < CRYPTO_BYTES ; i++ ){
+    	auth[i + ID_BYTES*3 + PW_BYTES + AES_BLOCK_SIZE + CIPHERTEXT_BYTES] = key_b[i];
+    } 
+
+
+    hash_h(send_b0, auth, AUTH_SIZE);
+
+
 }
+
+
+int pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *send_a0, uint8_t *ssid, uint8_t *pw, uint8_t *a_id, uint8_t *b_id, uint8_t *ct, uint8_t *send_b0, uint8_t *key_a){
+    uint8_t k_prime[CRYPTO_BYTES];
+    int i;
+
+    crypto_kem_decap(k_prime, sk, pk, ct);
+
+    printf("k_prime:");
+    printData(k_prime, 32);
+    
+}
+
+

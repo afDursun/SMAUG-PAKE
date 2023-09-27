@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/aes.c" "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles/smaug1.dir/src/aes.c.o"
   "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/ciphertext.c" "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles/smaug1.dir/src/ciphertext.c.o"
   "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/dg.c" "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles/smaug1.dir/src/dg.c.o"
   "/home/afd/Desktop/smaug/SMAUG-reference-implementation/src/hash.c" "/home/afd/Desktop/smaug/SMAUG-reference-implementation/build/CMakeFiles/smaug1.dir/src/hash.c.o"

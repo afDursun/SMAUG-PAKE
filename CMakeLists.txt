@@ -27,6 +27,7 @@ set(srcs
     ${PROJECT_SOURCE_DIR}/src/poly.c
     ${PROJECT_SOURCE_DIR}/src/key.c
     ${PROJECT_SOURCE_DIR}/src/pake.c
+    ${PROJECT_SOURCE_DIR}/src/aes.c
     ${PROJECT_SOURCE_DIR}/src/ciphertext.c
     ${PROJECT_SOURCE_DIR}/src/hwt.c
     ${PROJECT_SOURCE_DIR}/src/kem.c

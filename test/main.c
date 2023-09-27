@@ -2,6 +2,7 @@
 #include "indcpa.h"
 #include "io.h"
 #include "kem.h"
+#include "aes.h"
 #include "pack.h"
 #include "pake.h"
 #include "parameters.h"
@@ -12,29 +13,38 @@
 #include <openssl/aes.h>
 
 #define m_size 10
+#define DATA_SIZE 672
+#define BLOCK_SIZE 16
 
 int indcpa_test();
 int kem_test();
 
+
+
 int main(void) {
+   
+
     size_t i = 0; 
     uint8_t pw[PW_BYTES] = {0};
-    uint8_t cid[ID_BYTES] = {0}; 
-    uint8_t sid[ID_BYTES] = {0};
+    uint8_t a_id[ID_BYTES] = {0}; 
+    uint8_t b_id[ID_BYTES] = {0}; 
+    uint8_t ssid[ID_BYTES] = {0};
     uint8_t pk[PUBLICKEY_BYTES] = {0};
     uint8_t sk[KEM_SECRETKEY_BYTES] = {0};
-    uint8_t key_a[CRYPTO_BYTES];
+    uint8_t key_a[CRYPTO_BYTES] = {0};
+    uint8_t key_b[CRYPTO_BYTES]= {0};
     uint8_t ct[CIPHERTEXT_BYTES] = {0};
     
-    uint8_t send_a0[AES_BLOCK_SIZE*4];
-    uint8_t send_b0[100];
+    uint8_t send_a0[PAKE_A0_SEND];
+    uint8_t send_b0[SHA3_256_HashSize];
     uint8_t state_1[100+3] ={0};
     uint8_t state_2[100+3] = {0};
     
     for(i = 0 ; i < ID_BYTES ; i++){
     	pw[i] = 1;
-    	cid[i] = 2;
-    	sid[i] = 3;
+    	a_id[i] = 0;
+        b_id[i] = 0;
+    	ssid[i] = 0;
     }
     
     uint8_t entropy_input[48] = {0};
@@ -43,11 +53,14 @@ int main(void) {
     }
     randombytes_init(entropy_input, NULL, 256);
 
-// pake_s0(send_s0, send_c0, &gamma, sid, state_2,ct,key_a);
+    //SendA0 => Epk
+    //SendB0 => Auth
 
-    pake_a0(pw, cid, sid, send_a0, state_1, pk, sk);
+    pake_a0(pw, ssid, send_a0, state_1, pk, sk);
   
-    pake_b0(send_a0, sid, send_b0, state_2, ct, key_a);
+    pake_b0(send_a0, pw, a_id, b_id, ssid, send_b0, state_2, ct, key_b);
+
+    pake_a1(pk, sk, send_a0, ssid, pw, a_id, b_id, ct, send_b0, key_a);
     
 
     return 0;

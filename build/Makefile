@@ -433,6 +433,39 @@ smaug1-benchmark/fast:
 	$(MAKE) -f benchmark/CMakeFiles/smaug1-benchmark.dir/build.make benchmark/CMakeFiles/smaug1-benchmark.dir/build
 .PHONY : smaug1-benchmark/fast
 
+src/aes.o: src/aes.c.o
+
+.PHONY : src/aes.o
+
+# target to build an object file
+src/aes.c.o:
+	$(MAKE) -f CMakeFiles/smaug5.dir/build.make CMakeFiles/smaug5.dir/src/aes.c.o
+	$(MAKE) -f CMakeFiles/smaug3.dir/build.make CMakeFiles/smaug3.dir/src/aes.c.o
+	$(MAKE) -f CMakeFiles/smaug1.dir/build.make CMakeFiles/smaug1.dir/src/aes.c.o
+.PHONY : src/aes.c.o
+
+src/aes.i: src/aes.c.i
+
+.PHONY : src/aes.i
+
+# target to preprocess a source file
+src/aes.c.i:
+	$(MAKE) -f CMakeFiles/smaug5.dir/build.make CMakeFiles/smaug5.dir/src/aes.c.i
+	$(MAKE) -f CMakeFiles/smaug3.dir/build.make CMakeFiles/smaug3.dir/src/aes.c.i
+	$(MAKE) -f CMakeFiles/smaug1.dir/build.make CMakeFiles/smaug1.dir/src/aes.c.i
+.PHONY : src/aes.c.i
+
+src/aes.s: src/aes.c.s
+
+.PHONY : src/aes.s
+
+# target to generate assembly for a file
+src/aes.c.s:
+	$(MAKE) -f CMakeFiles/smaug5.dir/build.make CMakeFiles/smaug5.dir/src/aes.c.s
+	$(MAKE) -f CMakeFiles/smaug3.dir/build.make CMakeFiles/smaug3.dir/src/aes.c.s
+	$(MAKE) -f CMakeFiles/smaug1.dir/build.make CMakeFiles/smaug1.dir/src/aes.c.s
+.PHONY : src/aes.c.s
+
 src/ciphertext.o: src/ciphertext.c.o
 
 .PHONY : src/ciphertext.o
@@ -916,6 +949,9 @@ help:
 	@echo "... smaug5-benchmark"
 	@echo "... smaug3-benchmark"
 	@echo "... smaug1-benchmark"
+	@echo "... src/aes.o"
+	@echo "... src/aes.i"
+	@echo "... src/aes.s"
 	@echo "... src/ciphertext.o"
 	@echo "... src/ciphertext.i"
 	@echo "... src/ciphertext.s"

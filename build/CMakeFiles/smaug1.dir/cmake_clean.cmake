@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/smaug1.dir/src/aes.c.o"
   "CMakeFiles/smaug1.dir/src/ciphertext.c.o"
   "CMakeFiles/smaug1.dir/src/dg.c.o"
   "CMakeFiles/smaug1.dir/src/hash.c.o"
