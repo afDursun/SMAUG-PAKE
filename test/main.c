@@ -31,19 +31,21 @@ int main(void) {
     uint8_t ssid[ID_BYTES] = {0};
     uint8_t pk[PUBLICKEY_BYTES] = {0};
     uint8_t sk[KEM_SECRETKEY_BYTES] = {0};
+    uint8_t k[CRYPTO_BYTES] = {0};
+    uint8_t auth_b[AUTH_SIZE];
+
     uint8_t key_a[CRYPTO_BYTES] = {0};
     uint8_t key_b[CRYPTO_BYTES]= {0};
     uint8_t ct[CIPHERTEXT_BYTES] = {0};
     
     uint8_t send_a0[PAKE_A0_SEND];
     uint8_t send_b0[SHA3_256_HashSize];
-    uint8_t state_1[100+3] ={0};
-    uint8_t state_2[100+3] = {0};
+
     
     for(i = 0 ; i < ID_BYTES ; i++){
-    	pw[i] = 1;
-    	a_id[i] = 0;
-        b_id[i] = 0;
+    	pw[i] = 3;
+    	a_id[i] = 1;
+        b_id[i] = 2;
     	ssid[i] = 0;
     }
     
@@ -56,12 +58,14 @@ int main(void) {
     //SendA0 => Epk
     //SendB0 => Auth
 
-    pake_a0(pw, ssid, send_a0, state_1, pk, sk);
+    pake_a0(pw, ssid, send_a0, pk, sk);
   
-    pake_b0(send_a0, pw, a_id, b_id, ssid, send_b0, state_2, ct, key_b);
+    pake_b0(send_a0, pw, a_id, b_id, ssid, send_b0, ct, k, auth_b);
 
     pake_a1(pk, sk, send_a0, ssid, pw, a_id, b_id, ct, send_b0, key_a);
-    
+
+    pake_b1(ssid,a_id,b_id,send_a0,ct,auth_b,k,key_b);
+
 
     return 0;
 }

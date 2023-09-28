@@ -86,6 +86,7 @@
 #define PKPOLYMAT_BYTES (PKPOLYVEC_BYTES * MODULE_RANK)                         // matrix with element in R_q
 #define PUBLICKEY_BYTES (PKSEED_BYTES + PKPOLYVEC_BYTES)                        // (A seed, b(x) vector)
 #define PAKE_A0_SEND (ID_BYTES + PW_BYTES + PUBLICKEY_BYTES)
-// clang-format on
+#define AUTH_SIZE (ID_BYTES + ID_BYTES + ID_BYTES + PW_BYTES + PAKE_A0_SEND + CIPHERTEXT_BYTES + CRYPTO_BYTES)
+
 
 #endif // SMAUG_PARAMETERS_H
