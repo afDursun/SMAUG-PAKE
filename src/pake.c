@@ -42,97 +42,98 @@ void printData(const uint8_t *data, size_t dataSize) {
 }
 
 
-int pake_a0(uint8_t *pw, uint8_t *ssid, uint8_t *send_a0, uint8_t *pk, uint8_t *sk) {
+void pake_a0(uint8_t *pw, uint8_t *ssid, uint8_t *epk, uint8_t *pk, uint8_t *sk) {
+    printf("\n****************PAKE-A0****************");
     int i;
-
     uint8_t key[16] = "my_128_bit_key";
-    uint8_t conc[PAKE_A0_SEND];
-    uint8_t conc1[PAKE_A0_SEND];
-   
+    uint8_t components[PAKE_A0_SEND];
     
     crypto_kem_keypair(pk, sk);
     
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	conc[i] = ssid[i];
+        components[i] = ssid[i];
     } 
     
     for(i = 0; i < PW_BYTES ; i++ ){
-    	conc[i + ID_BYTES] = pw[i];
+        components[i + ID_BYTES] = pw[i];
     } 
     
     for(i = 0; i < PUBLICKEY_BYTES ; i++ ){
-    	conc[i + ID_BYTES + PW_BYTES] = pk[i];
+        components[i + ID_BYTES + PW_BYTES] = pk[i];
     } 
 
 
-    encryptData(key, conc, PAKE_A0_SEND);
-    memcpy(send_a0, conc, PAKE_A0_SEND);
+    encryptData(key, components, PAKE_A0_SEND);
+    memcpy(epk, components, PAKE_A0_SEND);
 
-    printf("\n_____PAKE-A0_____");
+    
     printf("\nA0 ---> B0:   ");
-    printf("A(%d), Epk(%d)\n\n",ID_BYTES,PAKE_A0_SEND);
+    printf("A(%d), epk(%d) \nTotal Send %d bytes",ID_BYTES,PAKE_A0_SEND, ID_BYTES+PAKE_A0_SEND);
+    printf("\n***************************************\n\n\n");
 
-    return 1;
 }
 
-int pake_b0(uint8_t *send_a0, uint8_t *pw, uint8_t *a_id,  uint8_t *b_id, uint8_t *ssid, uint8_t *send_b0,uint8_t *ct,uint8_t *k,uint8_t *auth_b){
-    
+void pake_b0(uint8_t *epk, uint8_t *pw, uint8_t *a_id,  uint8_t *b_id, uint8_t *ssid, uint8_t *send_b0,uint8_t *ct,uint8_t *k,uint8_t *auth_b){
+    printf("\n****************PAKE-B0****************");
     uint8_t key[16] = "my_128_bit_key";
     int i;
     uint8_t pk[PUBLICKEY_BYTES] = {0};
-
-    decryptData(key, send_a0, PAKE_A0_SEND);
+    uint8_t components[PAKE_A0_SEND];
+    
+    memcpy(components, epk, PAKE_A0_SEND);
+    decryptData(key, components, PAKE_A0_SEND);
 
 
     for(i = 0 ; i < PUBLICKEY_BYTES ; i++){
-        pk[i] = send_a0[ID_BYTES + PW_BYTES + i];
+        pk[i] = components[ID_BYTES + PW_BYTES + i];
     }
     
     crypto_kem_encap(ct, k, pk);
 
-    encryptData(key, send_a0, PAKE_A0_SEND);
+    encryptData(key, epk, PAKE_A0_SEND);
    
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	auth_b[i] = ssid[i];
+        auth_b[i] = ssid[i];
     } 
     
     for(i = 0; i < ID_BYTES ; i++ ){
-    	auth_b[i + ID_BYTES] = a_id[i];
+        auth_b[i + ID_BYTES] = a_id[i];
     } 
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	auth_b[i + ID_BYTES*2] = b_id[i];
+        auth_b[i + ID_BYTES*2] = b_id[i];
     } 
 
     for(i = 0; i < PW_BYTES ; i++ ){
-    	auth_b[i + ID_BYTES*3] = pw[i];
+        auth_b[i + ID_BYTES*3] = pw[i];
     } 
 
     for(i = 0; i < PAKE_A0_SEND ; i++ ){
-    	auth_b[i + ID_BYTES*3 + PW_BYTES] = send_a0[i];
+        auth_b[i + ID_BYTES*3 + PW_BYTES] = epk[i];
     } 
 
     for(i = 0; i < CIPHERTEXT_BYTES ; i++ ){
-    	auth_b[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND] = ct[i];
+        auth_b[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND] = ct[i];
     } 
 
     for(i = 0; i < CRYPTO_BYTES ; i++ ){
-    	auth_b[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND + CIPHERTEXT_BYTES] = k[i];
+        auth_b[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND + CIPHERTEXT_BYTES] = k[i];
     } 
 
     hash_h(send_b0, auth_b, AUTH_SIZE);
 
-    printf("\n_____PAKE-B0_____");
+    
     printf("\nA1 <--- B0:   ");
-    printf("B(%d), c(%d), Auth(%d)\n\n",ID_BYTES,CIPHERTEXT_BYTES,AUTH_SIZE);
- 
+    printf("B(%d), c(%d), Auth(%d) \nTotal Send %d bytes",ID_BYTES,CIPHERTEXT_BYTES,AUTH_SIZE,ID_BYTES+CIPHERTEXT_BYTES+AUTH_SIZE);
+    printf("\n***************************************\n\n\n");
 
 }
 
 
-int pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *send_a0, uint8_t *ssid, uint8_t *pw, uint8_t *a_id, uint8_t *b_id, uint8_t *ct, uint8_t *send_b0, uint8_t *key_a){
+void pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *epk, uint8_t *ssid, uint8_t *pw, uint8_t *a_id, uint8_t *b_id, uint8_t *ct, uint8_t *key_a){
+    printf("\n****************PAKE-A1****************");
     uint8_t k_prime[CRYPTO_BYTES];
     int i;
     int HASH_SIZE = ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES + AUTH_SIZE +CRYPTO_BYTES;
@@ -146,31 +147,31 @@ int pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *send_a0, uint8_t *ssid, uint8_t *
 
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	auth[i] = ssid[i];
+        auth[i] = ssid[i];
     } 
     
     for(i = 0; i < ID_BYTES ; i++ ){
-    	auth[i + ID_BYTES] = a_id[i];
+        auth[i + ID_BYTES] = a_id[i];
     } 
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	auth[i + ID_BYTES*2] = b_id[i];
+        auth[i + ID_BYTES*2] = b_id[i];
     } 
 
     for(i = 0; i < PW_BYTES ; i++ ){
-    	auth[i + ID_BYTES*3] = pw[i];
+        auth[i + ID_BYTES*3] = pw[i];
     } 
 
     for(i = 0; i < PAKE_A0_SEND ; i++ ){
-    	auth[i + ID_BYTES*3 + PW_BYTES] = send_a0[i];
+        auth[i + ID_BYTES*3 + PW_BYTES] = epk[i];
     } 
 
     for(i = 0; i < CIPHERTEXT_BYTES ; i++ ){
-    	auth[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND] = ct[i];
+        auth[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND] = ct[i];
     } 
 
     for(i = 0; i < CRYPTO_BYTES ; i++ ){
-    	auth[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND + CIPHERTEXT_BYTES] = k_prime[i];
+        auth[i + ID_BYTES*3 + PW_BYTES + PAKE_A0_SEND + CIPHERTEXT_BYTES] = k_prime[i];
     } 
 
 
@@ -178,83 +179,83 @@ int pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *send_a0, uint8_t *ssid, uint8_t *
 
     
     for(i = 0; i < ID_BYTES ; i++ ){
-    	hash_array[i] = ssid[i];
+        hash_array[i] = ssid[i];
     } 
     
     for(i = 0; i < ID_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES] = a_id[i];
+        hash_array[i + ID_BYTES] = a_id[i];
     } 
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES*2] = b_id[i];
+        hash_array[i + ID_BYTES*2] = b_id[i];
     } 
 
     for(i = 0; i < PAKE_A0_SEND ; i++ ){
-    	hash_array[i + ID_BYTES*3 ] = send_a0[i];
+        hash_array[i + ID_BYTES*3 ] = epk[i];
     } 
 
     for(i = 0; i < CIPHERTEXT_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES*3  + PAKE_A0_SEND] = ct[i];
+        hash_array[i + ID_BYTES*3  + PAKE_A0_SEND] = ct[i];
     } 
 
     for(i = 0; i < AUTH_SIZE ; i++ ){
-    	hash_array[i + ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES] = auth[i];
+        hash_array[i + ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES] = auth[i];
     } 
 
     for(i = 0; i < CRYPTO_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES*3  + PAKE_A0_SEND + CIPHERTEXT_BYTES+ AUTH_SIZE] = k_prime[i];
+        hash_array[i + ID_BYTES*3  + PAKE_A0_SEND + CIPHERTEXT_BYTES+ AUTH_SIZE] = k_prime[i];
     } 
 
     hash_h(key_a, hash_array, HASH_SIZE);
 
-    printf("\n\n\n_____PAKE-A1_____");
     printf("\nsuccess...");
     printf("\nSession Key A:");
     printData(key_a,SHA3_256_HashSize);
+    printf("***************************************\n\n\n");
 
   
     
 }
 
 
-int pake_b1(uint8_t *ssid, uint8_t *a_id, uint8_t *b_id, uint8_t *send_a0, uint8_t *ct, uint8_t *auth_b, uint8_t *k, uint8_t *key_b){
+void pake_b1(uint8_t *ssid, uint8_t *a_id, uint8_t *b_id, uint8_t *epk, uint8_t *ct, uint8_t *auth_b, uint8_t *k, uint8_t *key_b){
+    printf("\n****************PAKE-B1****************");
     int HASH_SIZE = ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES + AUTH_SIZE +CRYPTO_BYTES;
     uint8_t hash_array[HASH_SIZE];
     int i;
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	hash_array[i] = ssid[i];
+        hash_array[i] = ssid[i];
     } 
     
     for(i = 0; i < ID_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES] = a_id[i];
+        hash_array[i + ID_BYTES] = a_id[i];
     } 
 
     for(i = 0; i < ID_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES*2] = b_id[i];
+        hash_array[i + ID_BYTES*2] = b_id[i];
     } 
 
     for(i = 0; i < PAKE_A0_SEND ; i++ ){
-    	hash_array[i + ID_BYTES*3 ] = send_a0[i];
+        hash_array[i + ID_BYTES*3 ] = epk[i];
     } 
 
     for(i = 0; i < CIPHERTEXT_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES*3  + PAKE_A0_SEND] = ct[i];
+        hash_array[i + ID_BYTES*3  + PAKE_A0_SEND] = ct[i];
     } 
 
     for(i = 0; i < AUTH_SIZE ; i++ ){
-    	hash_array[i + ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES] = auth_b[i];
+        hash_array[i + ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES] = auth_b[i];
     } 
 
     for(i = 0; i < CRYPTO_BYTES ; i++ ){
-    	hash_array[i + ID_BYTES*3  + PAKE_A0_SEND + CIPHERTEXT_BYTES+ AUTH_SIZE] = k[i];
+        hash_array[i + ID_BYTES*3  + PAKE_A0_SEND + CIPHERTEXT_BYTES+ AUTH_SIZE] = k[i];
     } 
 
     hash_h(key_b, hash_array, HASH_SIZE);
 
-    printf("\n\n\n_____PAKE-B1_____");
     printf("\nsuccess...");
     printf("\nSession Key B:");
     printData(key_b,SHA3_256_HashSize);
-    printf("\n\n\n");
+    printf("***************************************\n\n\n");
 }
