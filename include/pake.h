@@ -25,7 +25,8 @@ void pake_b0(
 void pake_a1(
 	uint8_t *pk, 
 	uint8_t *sk, 
-	uint8_t *send_a0, 
+	uint8_t *epk, 
+	uint8_t *send_b0, 
 	uint8_t *ssid,
 	uint8_t *pw,
 	uint8_t *a_id,

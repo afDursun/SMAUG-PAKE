@@ -62,7 +62,7 @@ int main(void) {
   
     pake_b0(send_a0, pw, a_id, b_id, ssid, send_b0, ct, k, auth_b);
 
-    pake_a1(pk, sk, send_a0, ssid, pw, a_id, b_id, ct, key_a);
+    pake_a1(pk, sk, send_a0, send_b0, ssid, pw, a_id, b_id, ct, key_a);
 
     pake_b1(ssid,a_id,b_id,send_a0,ct,auth_b,k,key_b);
 
