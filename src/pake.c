@@ -42,10 +42,10 @@ void printData(const uint8_t *data, size_t dataSize) {
 }
 
 
-void pake_a0(uint8_t *pw, uint8_t *ssid, uint8_t *epk, uint8_t *pk, uint8_t *sk) {
+void pake_a0(const unsigned char *pw, const uint8_t *ssid, uint8_t *epk, uint8_t *pk, uint8_t *sk) {
     printf("\n****************PAKE-A0****************");
     int i;
-    uint8_t key[16] = "my_128_bit_key";
+    const uint8_t key[16] = "my_128_bit_key";
     uint8_t components[PAKE_A0_SEND];
     
     crypto_kem_keypair(pk, sk);
@@ -76,7 +76,8 @@ void pake_a0(uint8_t *pw, uint8_t *ssid, uint8_t *epk, uint8_t *pk, uint8_t *sk)
 
 }
 
-void pake_b0(uint8_t *epk, uint8_t *pw, uint8_t *a_id,  uint8_t *b_id, uint8_t *ssid, uint8_t *send_b0,uint8_t *ct,uint8_t *k,uint8_t *auth_b){
+void pake_b0(const unsigned char *pw, const uint8_t *ssid, const unsigned char *a_id, const unsigned char *b_id,  
+                    uint8_t *epk, uint8_t *send_b0,uint8_t *ct,uint8_t *k,uint8_t *auth_b){
     printf("\n****************PAKE-B0****************");
     uint8_t key[16] = "my_128_bit_key";
     int i;
@@ -92,9 +93,6 @@ void pake_b0(uint8_t *epk, uint8_t *pw, uint8_t *a_id,  uint8_t *b_id, uint8_t *
     }
     
     crypto_kem_encap(ct, k, pk);
-
-    encryptData(key, epk, PAKE_A0_SEND);
-   
 
     for(i = 0; i < ID_BYTES ; i++ ){
         auth_b[i] = ssid[i];
@@ -134,7 +132,7 @@ void pake_b0(uint8_t *epk, uint8_t *pw, uint8_t *a_id,  uint8_t *b_id, uint8_t *
 }
 
 
-void pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *epk, uint8_t *send_b0, uint8_t *ssid, uint8_t *pw, uint8_t *a_id, uint8_t *b_id, uint8_t *ct, uint8_t *key_a){
+void pake_a1(const unsigned char *pw, uint8_t *pk, uint8_t *sk, uint8_t *epk, uint8_t *send_b0, const uint8_t *ssid, const unsigned char *a_id, const unsigned char *b_id, uint8_t *ct, uint8_t *key_a){
     printf("\n****************PAKE-A1****************");
     uint8_t k_prime[CRYPTO_BYTES];
     int i;
@@ -216,13 +214,11 @@ void pake_a1(uint8_t *pk, uint8_t *sk, uint8_t *epk, uint8_t *send_b0, uint8_t *
         printf("Auth Failed....\n");
     }
     
-    // if hash_array == bob_auth  else auth failed
-    
     
 
 }
 
-void pake_b1(uint8_t *ssid, uint8_t *a_id, uint8_t *b_id, uint8_t *epk, uint8_t *ct, uint8_t *auth_b, uint8_t *k, uint8_t *key_b){
+void pake_b1(const uint8_t *ssid, const unsigned char *a_id, const unsigned char *b_id, uint8_t *epk, uint8_t *ct, uint8_t *auth_b, uint8_t *k, uint8_t *key_b){
     printf("\n****************PAKE-B1****************");
     int HASH_SIZE = ID_BYTES*3 + PAKE_A0_SEND + CIPHERTEXT_BYTES + AUTH_SIZE +CRYPTO_BYTES;
     uint8_t hash_array[HASH_SIZE];
